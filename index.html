@@ -34,20 +34,23 @@
 
             //Adds btn to DOM; defined vars
             const shoppingList = document.querySelector(ul)
-            const newItem = document.querySelector(input);
+            const listItem = document.querySelector(input);
             const btn = document.querySelector(button);
 
             // Function fo button to use input
             btn.addEventListener("click", () => {
-                var input = document.getElementById (newItem).value;
-                const newItem = "";
+                var input = document.getElementById (listItem).value;
+                const listItem = "";
         })
         // creates a list, span, and a buttton in DOM memory
             document.createElement('li');
             document.createElement("span");
             document.createElement("button");
-    
-            
+
+        // vars to store new elements
+            const list = document.querySelector(li);
+            const span = document.querySelector(span);
+            const button = document.querySelector (button);
 
         </script>
     </body>
