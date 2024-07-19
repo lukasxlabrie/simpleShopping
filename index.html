@@ -42,15 +42,10 @@
                 const itemInput = item.value;
                 input.value = '';
         
-                 // creates a list, span, and a buttton in DOM memory
-                document.createElement('li');
-                document.createElement("span");
-                document.createElement("button");
+                const listItem = document.createElement('li');
+                const span = document.createElement('span');
+                const deleteButton = document.createElement('button');
 
-                // vars to store new elements
-                const listItems = document.querySelector(li);
-                const listText = document.querySelector(span);
-                const deleteButton = document.querySelector (button);
 
                 listItems.appendChild (listText);
                 listItems.appendChild (deleteButton);
