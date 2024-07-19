@@ -40,6 +40,7 @@
             // Function for button to use input
             document.querySelector('#add-to-list').addEventListener("click", () => {
                 const itemInput = newItem.value;
+                shoppingList.appendChild(newItem.value);
                 newItem.value = '';
         
                 const listItems = document.createElement('li');
