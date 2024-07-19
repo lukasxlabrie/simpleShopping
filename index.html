@@ -39,10 +39,10 @@
 
             // Function for button to use input
             document.querySelector('#add-to-list').addEventListener("click", () => {
-                const itemInput = item.value;
-                input.value = '';
+                const itemInput = item.textContent;
+                item.textContent = '';
         
-                const listItem = document.createElement('li');
+                const listItems = document.createElement('li');
                 const span = document.createElement('span');
                 const deleteButton = document.createElement('button');
 
