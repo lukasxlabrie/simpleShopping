@@ -41,17 +41,15 @@
             document.querySelector('#add-to-list').addEventListener("click", () => {
                 const itemInput = newItem.value;
                 newItem.value = '';
-                console.log(newItem.value);
+                console.log(itemInput);
         
                 const listItems = document.createElement('li');
-                const listText = document.createElement('span');
-                const deleteButton = document.createElement('button');
-
-
                 listItems.appendChild (listText);
-                listItems.appendChild (deleteButton);
-
                 listText.textContent = itemInput;
+                const listText = document.createElement('span');
+
+                const deleteButton = document.createElement('button');
+                listItems.appendChild (deleteButton);
                 deleteButton.textContent = "delete";
 
                 deleteButton.addEventListener("click", () => {
