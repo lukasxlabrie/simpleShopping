@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en-us">
+<html lang="en-us">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,51 +22,49 @@
     <div>
       <label for="item">Enter New Item</label>
       <input type="text" name="item" id="item">
-      <button>Add item</button>
+      <button id="add-button">Add item</button>
     </div>
   
     <ul id="shopping-list"></ul>
 
     <script>
         // Vars and references for ul, input, and button
-        const shoppingList = document.querySelector(ul);
-        const newItem = document.querySelector(input);
-        const Additem = document.querySelector (button);
+        const shoppingList = document.querySelector('#shopping-list');
+        const newItem = document.querySelector('#item');
+        const addItemButton = document.querySelector('#add-button');
 
         // when button is clicked, input is stored, and button is cleared
-        button.addEventListener('click', () => {
-        const userItem = input.value;
-        input.value = '';
-        
-        // creates and stores a list, span (list text) and a new button (delete)
-        const listItem = document.createElement (li);
-        const listText = document.createElement (span);
-        const deleteButton = document.createElement (button);
+        addItemButton.addEventListener('click', () => {
+            const userItem = newItem.value;
+            newItem.value = '';
+            
+            // creates and stores a list, span (list text) and a new button (delete)
+            const listItem = document.createElement('li');
+            const listText = document.createElement('span');
+            const deleteButton = document.createElement('button');
 
-        // moves span and button as siblings and children to listItem
-        listItem.appendChild(span);
-        listItem.appendChild(button);
+            // moves span and button as siblings and children to listItem
+            listItem.appendChild(listText);
+            listItem.appendChild(deleteButton);
 
-        //span will read value from input
-        span.textContent = (userItem);
+            // span will read value from input
+            listText.textContent = userItem;
 
-        //button will be labeled as "delete"
-        deleteButton.textContent("delete");
+            // button will be labeled as "delete"
+            deleteButton.textContent = 'delete';
 
-        //moves listItem to the shopping list
-        shoppingList.appendChild(listItem);
+            // moves listItem to the shopping list
+            shoppingList.appendChild(listItem);
 
-        //alows delete button to remove item from list when clicked
-        deleteButton.addEventListener("click", () => {
-          shoppingList.removeChild(listItem);
-        });
+            // allows delete button to remove item from list when clicked
+            deleteButton.addEventListener('click', () => {
+                shoppingList.removeChild(listItem);
+            });
 
-        //resets so we can use input again
-        input.focus();
-
+            // resets so we can use input again
+            newItem.focus();
         });
 
     </script>
 </body>
-
 </html>
