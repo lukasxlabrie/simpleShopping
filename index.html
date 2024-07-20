@@ -26,13 +26,19 @@
     </div>
   
     <ul id="shopping-list"></ul>
-    
+
     <script>
         // Vars and references for ul, input, and button
         const shoppingList = document.querySelector(ul);
         const newItem = document.querySelector(input);
         const Additem = document.querySelector (button);
 
+        // when button is clicked, input is stored, and button is cleared
+        button.addEventListener('click', () => {
+        const userItem = input.value;
+        input.value = '';
+
+        })
 
     </script>
 </body>
