@@ -37,6 +37,19 @@
         button.addEventListener('click', () => {
         const userItem = input.value;
         input.value = '';
+        
+        // creates and stores a list, span (list text) and a new button (delete)
+        const listItem = document.createElement (li);
+        const listText = document.createElement (span);
+        const deleteButton = document.createElement (button);
+
+        // moves span and button as siblings and children to listItem
+        listItem.appendChild(span);
+        listItem.appendChild(button);
+
+        //button will be labeled as "delete"
+        deleteButton.textContent("delete");
+
 
         })
 
