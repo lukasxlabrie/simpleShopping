@@ -56,6 +56,11 @@
         //moves listItem to the shopping list
         shoppingList.appendChild(listItem);
 
+        //alows delete button to remove item from list when clicked
+        deleteButton.addEventListener("click", () => {
+          shoppingList.removeChild(listItem);
+        })
+
 
 
         })
