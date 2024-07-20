@@ -44,9 +44,11 @@
                 console.log(itemInput);
         
                 const listItems = document.createElement('li');
-                listItems.appendChild (listText);
-                listText.textContent = itemInput;
                 const listText = document.createElement('span');
+                listText.textContent = itemInput;
+                listItems.appendChild (listText);
+               
+                
 
                 const deleteButton = document.createElement('button');
                 listItems.appendChild (deleteButton);
